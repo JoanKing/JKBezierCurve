@@ -21,25 +21,28 @@ class ViewController: UIViewController {
         self.view.backgroundColor = .brown
         
         self.view.jk.addSubviews([testButton, removeButton, paramsButton, showYButton])
+        
+        let buttonW: CGFloat = (jk_kScreenW - 16 * 4) / 3.0
+        
         testButton.snp.makeConstraints { make in
             make.top.equalTo(jk_kNavFrameH)
-            make.left.equalTo(50)
-            make.size.equalTo(CGSize(width: 80, height: 60))
+            make.left.equalTo(16)
+            make.size.equalTo(CGSize(width: buttonW, height: 60))
         }
         removeButton.snp.makeConstraints { make in
             make.top.equalTo(jk_kNavFrameH)
             make.left.equalTo(testButton.snp.right).offset(16)
-            make.size.equalTo(CGSize(width: 80, height: 60))
+            make.size.equalTo(CGSize(width: buttonW, height: 60))
         }
         paramsButton.snp.makeConstraints { make in
             make.top.equalTo(jk_kNavFrameH)
             make.left.equalTo(removeButton.snp.right).offset(16)
-            make.size.equalTo(CGSize(width: 100, height: 60))
+            make.size.equalTo(CGSize(width: buttonW, height: 60))
         }
         showYButton.snp.makeConstraints { make in
             make.top.equalTo(testButton.snp.bottom).offset(18)
-            make.left.equalTo(50)
-            make.size.equalTo(CGSize(width: 100, height: 60))
+            make.left.equalTo(testButton.snp.left)
+            make.size.equalTo(CGSize(width: buttonW, height: 60))
         }
        
         self.view.addSubview(gridView)
@@ -108,6 +111,8 @@ class ViewController: UIViewController {
         button.clipsToBounds = true
         button.setTitleColor(UIColor.blue, for: .normal)
         button.setTitle("y获取x坐标", for: .normal)
+        button.titleLabel?.numberOfLines = 0
+        button.titleLabel?.textAlignment = .center
         button.addTarget(self, action: #selector(yClick), for: .touchUpInside)
         return button
     }()
