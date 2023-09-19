@@ -100,7 +100,7 @@ class BezierCurveView: UIView {
         lineLayer.colors = gradientColors
         lineLayer.startPoint = gradientStartPoint
         lineLayer.endPoint = gradientEndPoint
-        // [0, 0.2] 指的是 0-0.2之间颜色不渐变，0.2-1.0渐变
+        // [0, 0.2] 指的是0-0.2之间渐变 0.2-1.0颜色不渐变
         lineLayer.locations = locations
         
         let lineShape = LineShapeLayer()
@@ -156,6 +156,137 @@ extension BezierCurveView {
             setCircleView(index: i, point: points[i])
         }
         setNeedsDisplay()
+    }
+}
+
+//MARK: - 业务代码 - 点的展示与消失
+extension BezierCurveView {
+    
+    func showCircleView(xArray: [CGFloat]) {
+        paramPoints.removeAll()
+        guard let currentPath else {
+            return
+        }
+        for item in xArray {
+            let point = getPointXY(xy: item, path: currentPath)
+            paramPoints.append(point)
+            let view = CircleView()
+            view.layer.cornerRadius = 7.5
+            view.clipsToBounds = false
+            view.backgroundColor = .green
+            view.layer.borderWidth = 3
+            view.layer.borderColor = UIColor.white.cgColor
+            self.addSubview(view)
+            paramCircleViews.append(view)
+            view.snp.makeConstraints { make in
+                make.center.equalTo(point)
+                make.size.equalTo(CGSize(width: 15, height: 15))
+            }
+        }
+        debugPrint("打印的点：\(paramPoints)")
+    }
+    
+    func showCircleViewY(yArray: [CGFloat]) {
+        paramPoints.removeAll()
+        guard let currentPath else {
+            return
+        }
+        for item in yArray {
+            let point = getPointXY(xy: item, path: currentPath, isX: false)
+            let view = CircleView()
+            view.layer.cornerRadius = 7.5
+            view.clipsToBounds = false
+            view.backgroundColor = .green
+            view.layer.borderWidth = 3
+            view.layer.borderColor = UIColor.white.cgColor
+            self.addSubview(view)
+            paramCircleViews.append(view)
+            view.snp.makeConstraints { make in
+                make.center.equalTo(point)
+                make.size.equalTo(CGSize(width: 15, height: 15))
+            }
+        }
+        debugPrint("打印的点：\(paramPoints)")
+    }
+    
+    //MARK: 移除所有取值点
+    /// 移除所有取值点
+    func removeCircleView() {
+        for item in paramCircleViews {
+            item.removeFromSuperview()
+        }
+    }
+    
+    //MARK: 获取上传的值
+    /// 获取上传的值
+    func getParamPointArray() -> (cmd_state: [Int], auxiliary_curve: String) {
+        guard let currentPath else {
+            return ([], "")
+        }
+        paramPoints.removeAll()
+        var array: [CGFloat] = []
+        let width: CGFloat = (frame.size.width - 14) / 10.0
+        for i in 1...9 {
+            let xValue: CGFloat = 7.0 + CGFloat(i) * width
+            array.append(xValue)
+        }
+        for item in array {
+            let point = getPointXY(xy: item, path: currentPath)
+            paramPoints.append(point)
+        }
+        let paramValues = paramPoints.compactMap { point in
+            // 7.5是圆的半径
+            let y = point.y - 8.0
+            let value = NSDecimalNumberHandler.jk.calculation(
+                type: .dividing,
+                value1: y * 100.0,
+                value2: frame.size.height - 16,
+                roundingMode: .plain,
+                scale: 5).intValue
+            return 100 - value
+        }
+        
+        var netParam: [Int] = []
+        var previousValue: Int = 0
+        if paramValues.count > 3 {
+            for (index, item) in paramValues.enumerated() {
+                if index == 0 {
+                    netParam.append(item)
+                } else {
+                    // 后面的值不能比前面的值小
+                    netParam.append(item < previousValue ? previousValue : item)
+                }
+                previousValue = netParam[index]
+            }
+        }
+        // 最后一个值是固定的100
+        netParam.append(100)
+        
+        // 获取控制点的数据，最多是9个点，两头的控制点不传；服务器给的点的样式： 使用分号;分割点，使用逗号(,)分割x和y坐标百分比
+        var controllerString = ""
+        for (index, item) in points.enumerated() {
+            if (index != 0) && index != (points.count - 1) {
+                // 取中间的控制点给服务器
+                let xPercentage = NSDecimalNumberHandler.jk.calculation(
+                    type: .dividing,
+                    value1: (item.x - 7.0) * 100.0,
+                    value2: frame.size.width - 14,
+                    roundingMode: .plain,
+                    scale: 5).intValue
+                let yPercentage = 100 - NSDecimalNumberHandler.jk.calculation(
+                    type: .dividing,
+                    value1: (item.y - 8.0) * 100.0,
+                    value2: frame.size.height - 16,
+                    roundingMode: .plain,
+                    scale: 5).intValue
+                if index != 1 {
+                    controllerString = controllerString + ";"
+                }
+                controllerString = controllerString + "\(xPercentage),\(yPercentage)"
+            }
+        }
+        debugPrint("上传的点值：\(paramPoints) ❌没处理大小上传的百分比：\(paramValues) ✅处理大小上传的百分比：\(netParam) 控制点的百分比：\(controllerString)")
+        return (netParam, controllerString)
     }
 }
 
@@ -419,137 +550,6 @@ extension BezierCurveView: UIGestureRecognizerDelegate {
         } else {
             return false
         }
-    }
-}
-
-//MARK: - 业务代码 - 点的展示与消失
-extension BezierCurveView {
-    
-    func showCircleView(xArray: [CGFloat]) {
-        paramPoints.removeAll()
-        guard let currentPath else {
-            return
-        }
-        for item in xArray {
-            let point = getPointXY(xy: item, path: currentPath)
-            paramPoints.append(point)
-            let view = CircleView()
-            view.layer.cornerRadius = 7.5
-            view.clipsToBounds = false
-            view.backgroundColor = .green
-            view.layer.borderWidth = 3
-            view.layer.borderColor = UIColor.white.cgColor
-            self.addSubview(view)
-            paramCircleViews.append(view)
-            view.snp.makeConstraints { make in
-                make.center.equalTo(point)
-                make.size.equalTo(CGSize(width: 15, height: 15))
-            }
-        }
-        debugPrint("打印的点：\(paramPoints)")
-    }
-    
-    func showCircleViewY(yArray: [CGFloat]) {
-        paramPoints.removeAll()
-        guard let currentPath else {
-            return
-        }
-        for item in yArray {
-            let point = getPointXY(xy: item, path: currentPath, isX: false)
-            let view = CircleView()
-            view.layer.cornerRadius = 7.5
-            view.clipsToBounds = false
-            view.backgroundColor = .green
-            view.layer.borderWidth = 3
-            view.layer.borderColor = UIColor.white.cgColor
-            self.addSubview(view)
-            paramCircleViews.append(view)
-            view.snp.makeConstraints { make in
-                make.center.equalTo(point)
-                make.size.equalTo(CGSize(width: 15, height: 15))
-            }
-        }
-        debugPrint("打印的点：\(paramPoints)")
-    }
-    
-    //MARK: 移除所有取值点
-    /// 移除所有取值点
-    func removeCircleView() {
-        for item in paramCircleViews {
-            item.removeFromSuperview()
-        }
-    }
-    
-    //MARK: 获取上传的值
-    /// 获取上传的值
-    func getParamPointArray() -> (cmd_state: [Int], auxiliary_curve: String) {
-        guard let currentPath else {
-            return ([], "")
-        }
-        paramPoints.removeAll()
-        var array: [CGFloat] = []
-        let width: CGFloat = (frame.size.width - 14) / 10.0
-        for i in 1...9 {
-            let xValue: CGFloat = 7.0 + CGFloat(i) * width
-            array.append(xValue)
-        }
-        for item in array {
-            let point = getPointXY(xy: item, path: currentPath)
-            paramPoints.append(point)
-        }
-        let paramValues = paramPoints.compactMap { point in
-            // 7.5是圆的半径
-            let y = point.y - 8.0
-            let value = NSDecimalNumberHandler.jk.calculation(
-                type: .dividing,
-                value1: y * 100.0,
-                value2: frame.size.height - 16,
-                roundingMode: .plain,
-                scale: 5).intValue
-            return 100 - value
-        }
-        
-        var netParam: [Int] = []
-        var previousValue: Int = 0
-        if paramValues.count > 3 {
-            for (index, item) in paramValues.enumerated() {
-                if index == 0 {
-                    netParam.append(item)
-                } else {
-                    // 后面的值不能比前面的值小
-                    netParam.append(item < previousValue ? previousValue : item)
-                }
-                previousValue = netParam[index]
-            }
-        }
-        // 最后一个值是固定的100
-        netParam.append(100)
-        
-        // 获取控制点的数据，最多是9个点，两头的控制点不传；服务器给的点的样式： 使用分号;分割点，使用逗号(,)分割x和y坐标百分比
-        var controllerString = ""
-        for (index, item) in points.enumerated() {
-            if (index != 0) && index != (points.count - 1) {
-                // 取中间的控制点给服务器
-                let xPercentage = NSDecimalNumberHandler.jk.calculation(
-                    type: .dividing,
-                    value1: (item.x - 7.0) * 100.0,
-                    value2: frame.size.width - 14,
-                    roundingMode: .plain,
-                    scale: 5).intValue
-                let yPercentage = 100 - NSDecimalNumberHandler.jk.calculation(
-                    type: .dividing,
-                    value1: (item.y - 8.0) * 100.0,
-                    value2: frame.size.height - 16,
-                    roundingMode: .plain,
-                    scale: 5).intValue
-                if index != 1 {
-                    controllerString = controllerString + ";"
-                }
-                controllerString = controllerString + "\(xPercentage),\(yPercentage)"
-            }
-        }
-        debugPrint("上传的点值：\(paramPoints) ❌没处理大小上传的百分比：\(paramValues) ✅处理大小上传的百分比：\(netParam) 控制点的百分比：\(controllerString)")
-        return (netParam, controllerString)
     }
 }
 
