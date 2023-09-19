@@ -1,0 +1,9 @@
+platform :ios, '9.0'
+
+target 'BezierCurveDemo' do
+  use_frameworks!
+
+  pod 'SnapKit'
+  pod 'JKSwiftExtension'
+
+end

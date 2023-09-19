@@ -1,0 +1,20 @@
+PODS:
+  - JKSwiftExtension (2.4.0)
+  - SnapKit (4.2.0)
+
+DEPENDENCIES:
+  - JKSwiftExtension
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - JKSwiftExtension
+    - SnapKit
+
+SPEC CHECKSUMS:
+  JKSwiftExtension: 76331639ef39593131f6b3b5b89b9b35e961db8f
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+
+PODFILE CHECKSUM: 6ce1130b7becf5f2e6cb35cff12217a6d6343b6d
+
+COCOAPODS: 1.12.1

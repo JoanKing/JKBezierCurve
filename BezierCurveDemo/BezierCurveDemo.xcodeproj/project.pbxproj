@@ -1,0 +1,691 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55A5C1F32AB986B200E49DE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A5C1F22AB986B200E49DE9 /* AppDelegate.swift */; };
+		55A5C1F52AB986B200E49DE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A5C1F42AB986B200E49DE9 /* SceneDelegate.swift */; };
+		55A5C1F72AB986B200E49DE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A5C1F62AB986B200E49DE9 /* ViewController.swift */; };
+		55A5C1FA2AB986B200E49DE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55A5C1F82AB986B200E49DE9 /* Main.storyboard */; };
+		55A5C1FC2AB986B400E49DE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55A5C1FB2AB986B400E49DE9 /* Assets.xcassets */; };
+		55A5C1FF2AB986B400E49DE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55A5C1FD2AB986B400E49DE9 /* LaunchScreen.storyboard */; };
+		55A5C20A2AB986B500E49DE9 /* BezierCurveDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A5C2092AB986B500E49DE9 /* BezierCurveDemoTests.swift */; };
+		55A5C2142AB986B500E49DE9 /* BezierCurveDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A5C2132AB986B500E49DE9 /* BezierCurveDemoUITests.swift */; };
+		55A5C2162AB986B500E49DE9 /* BezierCurveDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A5C2152AB986B500E49DE9 /* BezierCurveDemoUITestsLaunchTests.swift */; };
+		55A5C2232AB9901F00E49DE9 /* BezierCurveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A5C2222AB9901F00E49DE9 /* BezierCurveView.swift */; };
+		55A5C2252AB9906000E49DE9 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A5C2242AB9906000E49DE9 /* GridView.swift */; };
+		55A5C2272AB9907E00E49DE9 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A5C2262AB9907E00E49DE9 /* CircleView.swift */; };
+		A1B56944462BE707E46B6964 /* Pods_BezierCurveDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F1C430AC525EB4EF00627E /* Pods_BezierCurveDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55A5C2062AB986B500E49DE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55A5C1E72AB986B200E49DE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55A5C1EE2AB986B200E49DE9;
+			remoteInfo = BezierCurveDemo;
+		};
+		55A5C2102AB986B500E49DE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55A5C1E72AB986B200E49DE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55A5C1EE2AB986B200E49DE9;
+			remoteInfo = BezierCurveDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		466E6F6BFD0D7A2472C397B4 /* Pods-BezierCurveDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BezierCurveDemo.debug.xcconfig"; path = "Target Support Files/Pods-BezierCurveDemo/Pods-BezierCurveDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		55A5C1EF2AB986B200E49DE9 /* BezierCurveDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BezierCurveDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55A5C1F22AB986B200E49DE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55A5C1F42AB986B200E49DE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		55A5C1F62AB986B200E49DE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55A5C1F92AB986B200E49DE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55A5C1FB2AB986B400E49DE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55A5C1FE2AB986B400E49DE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55A5C2002AB986B400E49DE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55A5C2052AB986B500E49DE9 /* BezierCurveDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BezierCurveDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55A5C2092AB986B500E49DE9 /* BezierCurveDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierCurveDemoTests.swift; sourceTree = "<group>"; };
+		55A5C20F2AB986B500E49DE9 /* BezierCurveDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BezierCurveDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55A5C2132AB986B500E49DE9 /* BezierCurveDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierCurveDemoUITests.swift; sourceTree = "<group>"; };
+		55A5C2152AB986B500E49DE9 /* BezierCurveDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierCurveDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		55A5C2222AB9901F00E49DE9 /* BezierCurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierCurveView.swift; sourceTree = "<group>"; };
+		55A5C2242AB9906000E49DE9 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		55A5C2262AB9907E00E49DE9 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		C6F1C430AC525EB4EF00627E /* Pods_BezierCurveDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BezierCurveDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2D2CC18374A73FB4783D114 /* Pods-BezierCurveDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BezierCurveDemo.release.xcconfig"; path = "Target Support Files/Pods-BezierCurveDemo/Pods-BezierCurveDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55A5C1EC2AB986B200E49DE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B56944462BE707E46B6964 /* Pods_BezierCurveDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55A5C2022AB986B500E49DE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55A5C20C2AB986B500E49DE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		39DB02B8B25F1A237B8D1046 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6F1C430AC525EB4EF00627E /* Pods_BezierCurveDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55A5C1E62AB986B200E49DE9 = {
+			isa = PBXGroup;
+			children = (
+				55A5C1F12AB986B200E49DE9 /* BezierCurveDemo */,
+				55A5C2082AB986B500E49DE9 /* BezierCurveDemoTests */,
+				55A5C2122AB986B500E49DE9 /* BezierCurveDemoUITests */,
+				55A5C1F02AB986B200E49DE9 /* Products */,
+				D273A3CD8218AD43AE8D6738 /* Pods */,
+				39DB02B8B25F1A237B8D1046 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		55A5C1F02AB986B200E49DE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55A5C1EF2AB986B200E49DE9 /* BezierCurveDemo.app */,
+				55A5C2052AB986B500E49DE9 /* BezierCurveDemoTests.xctest */,
+				55A5C20F2AB986B500E49DE9 /* BezierCurveDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55A5C1F12AB986B200E49DE9 /* BezierCurveDemo */ = {
+			isa = PBXGroup;
+			children = (
+				55A5C1F22AB986B200E49DE9 /* AppDelegate.swift */,
+				55A5C1F42AB986B200E49DE9 /* SceneDelegate.swift */,
+				55A5C1F62AB986B200E49DE9 /* ViewController.swift */,
+				55A5C2222AB9901F00E49DE9 /* BezierCurveView.swift */,
+				55A5C2242AB9906000E49DE9 /* GridView.swift */,
+				55A5C2262AB9907E00E49DE9 /* CircleView.swift */,
+				55A5C1F82AB986B200E49DE9 /* Main.storyboard */,
+				55A5C1FB2AB986B400E49DE9 /* Assets.xcassets */,
+				55A5C1FD2AB986B400E49DE9 /* LaunchScreen.storyboard */,
+				55A5C2002AB986B400E49DE9 /* Info.plist */,
+			);
+			path = BezierCurveDemo;
+			sourceTree = "<group>";
+		};
+		55A5C2082AB986B500E49DE9 /* BezierCurveDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				55A5C2092AB986B500E49DE9 /* BezierCurveDemoTests.swift */,
+			);
+			path = BezierCurveDemoTests;
+			sourceTree = "<group>";
+		};
+		55A5C2122AB986B500E49DE9 /* BezierCurveDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				55A5C2132AB986B500E49DE9 /* BezierCurveDemoUITests.swift */,
+				55A5C2152AB986B500E49DE9 /* BezierCurveDemoUITestsLaunchTests.swift */,
+			);
+			path = BezierCurveDemoUITests;
+			sourceTree = "<group>";
+		};
+		D273A3CD8218AD43AE8D6738 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				466E6F6BFD0D7A2472C397B4 /* Pods-BezierCurveDemo.debug.xcconfig */,
+				D2D2CC18374A73FB4783D114 /* Pods-BezierCurveDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55A5C1EE2AB986B200E49DE9 /* BezierCurveDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55A5C2192AB986B500E49DE9 /* Build configuration list for PBXNativeTarget "BezierCurveDemo" */;
+			buildPhases = (
+				C3F4E4BB4F25CCD7CE90E760 /* [CP] Check Pods Manifest.lock */,
+				55A5C1EB2AB986B200E49DE9 /* Sources */,
+				55A5C1EC2AB986B200E49DE9 /* Frameworks */,
+				55A5C1ED2AB986B200E49DE9 /* Resources */,
+				5648CD54BA01CCDCF4227E63 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BezierCurveDemo;
+			productName = BezierCurveDemo;
+			productReference = 55A5C1EF2AB986B200E49DE9 /* BezierCurveDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55A5C2042AB986B500E49DE9 /* BezierCurveDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55A5C21C2AB986B500E49DE9 /* Build configuration list for PBXNativeTarget "BezierCurveDemoTests" */;
+			buildPhases = (
+				55A5C2012AB986B500E49DE9 /* Sources */,
+				55A5C2022AB986B500E49DE9 /* Frameworks */,
+				55A5C2032AB986B500E49DE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55A5C2072AB986B500E49DE9 /* PBXTargetDependency */,
+			);
+			name = BezierCurveDemoTests;
+			productName = BezierCurveDemoTests;
+			productReference = 55A5C2052AB986B500E49DE9 /* BezierCurveDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		55A5C20E2AB986B500E49DE9 /* BezierCurveDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55A5C21F2AB986B500E49DE9 /* Build configuration list for PBXNativeTarget "BezierCurveDemoUITests" */;
+			buildPhases = (
+				55A5C20B2AB986B500E49DE9 /* Sources */,
+				55A5C20C2AB986B500E49DE9 /* Frameworks */,
+				55A5C20D2AB986B500E49DE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55A5C2112AB986B500E49DE9 /* PBXTargetDependency */,
+			);
+			name = BezierCurveDemoUITests;
+			productName = BezierCurveDemoUITests;
+			productReference = 55A5C20F2AB986B500E49DE9 /* BezierCurveDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55A5C1E72AB986B200E49DE9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					55A5C1EE2AB986B200E49DE9 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					55A5C2042AB986B500E49DE9 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 55A5C1EE2AB986B200E49DE9;
+					};
+					55A5C20E2AB986B500E49DE9 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 55A5C1EE2AB986B200E49DE9;
+					};
+				};
+			};
+			buildConfigurationList = 55A5C1EA2AB986B200E49DE9 /* Build configuration list for PBXProject "BezierCurveDemo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55A5C1E62AB986B200E49DE9;
+			productRefGroup = 55A5C1F02AB986B200E49DE9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55A5C1EE2AB986B200E49DE9 /* BezierCurveDemo */,
+				55A5C2042AB986B500E49DE9 /* BezierCurveDemoTests */,
+				55A5C20E2AB986B500E49DE9 /* BezierCurveDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55A5C1ED2AB986B200E49DE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55A5C1FF2AB986B400E49DE9 /* LaunchScreen.storyboard in Resources */,
+				55A5C1FC2AB986B400E49DE9 /* Assets.xcassets in Resources */,
+				55A5C1FA2AB986B200E49DE9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55A5C2032AB986B500E49DE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55A5C20D2AB986B500E49DE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5648CD54BA01CCDCF4227E63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BezierCurveDemo/Pods-BezierCurveDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BezierCurveDemo/Pods-BezierCurveDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BezierCurveDemo/Pods-BezierCurveDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3F4E4BB4F25CCD7CE90E760 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BezierCurveDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55A5C1EB2AB986B200E49DE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55A5C2272AB9907E00E49DE9 /* CircleView.swift in Sources */,
+				55A5C1F72AB986B200E49DE9 /* ViewController.swift in Sources */,
+				55A5C2232AB9901F00E49DE9 /* BezierCurveView.swift in Sources */,
+				55A5C1F32AB986B200E49DE9 /* AppDelegate.swift in Sources */,
+				55A5C2252AB9906000E49DE9 /* GridView.swift in Sources */,
+				55A5C1F52AB986B200E49DE9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55A5C2012AB986B500E49DE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55A5C20A2AB986B500E49DE9 /* BezierCurveDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55A5C20B2AB986B500E49DE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55A5C2162AB986B500E49DE9 /* BezierCurveDemoUITestsLaunchTests.swift in Sources */,
+				55A5C2142AB986B500E49DE9 /* BezierCurveDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55A5C2072AB986B500E49DE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55A5C1EE2AB986B200E49DE9 /* BezierCurveDemo */;
+			targetProxy = 55A5C2062AB986B500E49DE9 /* PBXContainerItemProxy */;
+		};
+		55A5C2112AB986B500E49DE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55A5C1EE2AB986B200E49DE9 /* BezierCurveDemo */;
+			targetProxy = 55A5C2102AB986B500E49DE9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55A5C1F82AB986B200E49DE9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55A5C1F92AB986B200E49DE9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55A5C1FD2AB986B400E49DE9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55A5C1FE2AB986B400E49DE9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55A5C2172AB986B500E49DE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55A5C2182AB986B500E49DE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55A5C21A2AB986B500E49DE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 466E6F6BFD0D7A2472C397B4 /* Pods-BezierCurveDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q24HFFF5V3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BezierCurveDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jk.curve.BezierCurveDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55A5C21B2AB986B500E49DE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2D2CC18374A73FB4783D114 /* Pods-BezierCurveDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q24HFFF5V3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BezierCurveDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jk.curve.BezierCurveDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		55A5C21D2AB986B500E49DE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YMYNARFN3C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jk.curve.BezierCurveDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BezierCurveDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BezierCurveDemo";
+			};
+			name = Debug;
+		};
+		55A5C21E2AB986B500E49DE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YMYNARFN3C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jk.curve.BezierCurveDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BezierCurveDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BezierCurveDemo";
+			};
+			name = Release;
+		};
+		55A5C2202AB986B500E49DE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YMYNARFN3C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jk.curve.BezierCurveDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BezierCurveDemo;
+			};
+			name = Debug;
+		};
+		55A5C2212AB986B500E49DE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YMYNARFN3C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jk.curve.BezierCurveDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BezierCurveDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55A5C1EA2AB986B200E49DE9 /* Build configuration list for PBXProject "BezierCurveDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55A5C2172AB986B500E49DE9 /* Debug */,
+				55A5C2182AB986B500E49DE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55A5C2192AB986B500E49DE9 /* Build configuration list for PBXNativeTarget "BezierCurveDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55A5C21A2AB986B500E49DE9 /* Debug */,
+				55A5C21B2AB986B500E49DE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55A5C21C2AB986B500E49DE9 /* Build configuration list for PBXNativeTarget "BezierCurveDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55A5C21D2AB986B500E49DE9 /* Debug */,
+				55A5C21E2AB986B500E49DE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55A5C21F2AB986B500E49DE9 /* Build configuration list for PBXNativeTarget "BezierCurveDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55A5C2202AB986B500E49DE9 /* Debug */,
+				55A5C2212AB986B500E49DE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55A5C1E72AB986B200E49DE9 /* Project object */;
+}

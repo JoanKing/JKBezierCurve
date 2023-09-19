@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-BezierCurveDemo/Pods-BezierCurveDemo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/JKSwiftExtension/JKSwiftExtension.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework

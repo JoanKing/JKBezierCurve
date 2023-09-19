@@ -1,0 +1,6 @@
+framework module Pods_BezierCurveDemo {
+  umbrella header "Pods-BezierCurveDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
