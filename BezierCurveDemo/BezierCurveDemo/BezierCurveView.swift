@@ -128,7 +128,7 @@ extension BezierCurveView {
     func setPointValue1(pointString: String) {
         // 起始点
         var pointArrays: [CGPoint] = [CGPoint(x: 7, y: frame.size.height - 7)]
-
+        // 中间点
         let splitedArray: [String] = pointString.jk.separatedByString(with: ";")
         if splitedArray.count > 2 {
             let curvW: CGFloat = frame.size.width - 14
@@ -142,7 +142,6 @@ extension BezierCurveView {
             }
             pointArrays.appends(array)
         }
-        
         // 终点
         pointArrays.append(CGPoint(x: frame.size.width - 7, y: 8))
         points = pointArrays
@@ -153,8 +152,11 @@ extension BezierCurveView {
     }
     
     func setPointValue(pointArray: [CGPoint]) {
+        // 起始点
         var pointArrays: [CGPoint] = [CGPoint(x: 7, y: frame.size.height - 7)]
+        // 中间点
         pointArrays.appends(pointArray)
+        // 终点
         pointArrays.append(CGPoint(x: frame.size.width - 7, y: 8))
         points = pointArrays
         for i in 0 ..< points.count {
