@@ -123,22 +123,27 @@ class BezierCurveView: UIView {
 //MARK: - 设置点，左上角是点：(0, 0)
 extension BezierCurveView {
     
-    func setPointValue1() {
-        // 服务器给的点的样式： 使用分号;分割点，使用逗号(,)分割x和y坐标百分比
-        let string = "47,40;60,60;70,90"
-        let splitedArray: [String] = string.jk.separatedByString(with: ";")
+    /// Description
+    /// - Parameter pointString: "47,40;60,60;70,90" 服务器给的点的样式： 使用分号;分割点，使用逗号(,)分割x和y坐标百分比
+    func setPointValue1(pointString: String) {
+        // 起始点
         var pointArrays: [CGPoint] = [CGPoint(x: 7, y: frame.size.height - 7)]
-        
-        let curvW: CGFloat = frame.size.width - 14
-        let curvH: CGFloat = frame.size.height - 16
-        let array = splitedArray.map { item in
-            let pointA = item.jk.separatedByString(with: ",")
-            let x: CGFloat = 7.0 + (pointA[0].jk.toCGFloat() ?? 0) * 0.01 * curvW
-            let y: CGFloat = 8.0 + (1.0 - (pointA[1].jk.toCGFloat() ?? 0) * 0.01) * curvH
-            let point: CGPoint = CGPoint(x: x, y: y)
-            return point
+
+        let splitedArray: [String] = pointString.jk.separatedByString(with: ";")
+        if splitedArray.count > 2 {
+            let curvW: CGFloat = frame.size.width - 14
+            let curvH: CGFloat = frame.size.height - 16
+            let array = splitedArray.map { item in
+                let pointA = item.jk.separatedByString(with: ",")
+                let x: CGFloat = 7.0 + (pointA[0].jk.toCGFloat() ?? 0) * 0.01 * curvW
+                let y: CGFloat = 8.0 + (1.0 - (pointA[1].jk.toCGFloat() ?? 0) * 0.01) * curvH
+                let point: CGPoint = CGPoint(x: x, y: y)
+                return point
+            }
+            pointArrays.appends(array)
         }
-        pointArrays.appends(array)
+        
+        // 终点
         pointArrays.append(CGPoint(x: frame.size.width - 7, y: 8))
         points = pointArrays
         for i in 0 ..< points.count {

@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         self.view.addSubview(gridView)
         self.view.addSubview(bezierPathView)
         
-        bezierPathView.setPointValue1()
+        bezierPathView.setPointValue1(pointString: "")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
