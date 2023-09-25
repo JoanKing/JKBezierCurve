@@ -22,6 +22,8 @@ class BezierCurveView: UIView {
     }
     /// 线宽
     var lineWidth: CGFloat = 6
+    /// 超出是否允许拖出方格的范围
+    var isCanPanGirdRange: Bool = true
     /// 超出前后点的拖动范围是否移除点，默认不移除
     var removePointBeyondFrontAndRearPoints: Bool = true
     /// 曲线是否可以交互
@@ -312,10 +314,9 @@ extension BezierCurveView {
             if let panView = panGesture.view {
                 // 手势移动的 x和y值随时间变化的总平移量
                 let translation = panGesture.translation(in: panView)
-                if (panView.frame.minY + translation.y) >= 0 && (panView.frame.maxY + translation.y) <= frame.size.height && (panView.frame.minX + translation.x) >= 0 && (panView.frame.maxX + translation.x) <= frame.size.width {
-                    
+                guard isCanPanGirdRange || ((panView.frame.minY + translation.y) >= 0 && (panView.frame.maxY + translation.y) <= frame.size.height && (panView.frame.minX + translation.x) >= 0 && (panView.frame.maxX + translation.x) <= frame.size.width)  else { return }
+
                     let panGestureRecognizerTag = panView.tag - 100
-                    
                     // 第一个点和最后一个点是否可交互
                     if panGestureRecognizerTag == 0 || panGestureRecognizerTag == points.count - 1 {
                         if isStartingAndEndingPointEnabled {
@@ -359,7 +360,6 @@ extension BezierCurveView {
                     points[panView.tag - 100] = point
                     debugPrint("打印tag：\(panView.tag - 100)")
                     setNeedsDisplay()
-                }
             }
         case .ended:
             debugPrint("拖动结束 新的value")
